@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     
     std::string file_path;
     
-    std::cout << "Specify the first filename: ";
+    std::cout << "Specify the first filename:  ";
     std::cin >> file1;
     
     file_path = getFilePath(file1);
