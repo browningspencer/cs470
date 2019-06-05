@@ -80,12 +80,14 @@ std::string getFilePath(std::string file_name)
             {
                     //    current directory "./"
                 case '/':
-                    i += 1;
+                    //i += 1;
+                    i += 2;
                     break;
                     //    parent directory "../"
                 case '.':
                     // moves iterator to '/'
-                    i += 2;
+                    //i += 2;
+                    i += 1;
                     
                     //    if the parent file_path is '/',
                     //    no change and slashes_num is
