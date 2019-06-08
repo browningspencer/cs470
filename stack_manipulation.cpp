@@ -174,7 +174,7 @@ void partTwo (char *text, long number)
         cout << setw(20) << dec << (&bow)[i];
         
         // get and display char stuff
-        char * charString = reinterpret_cast < char * > (&bow + i);
+        char * charString = reinterpretCast < char * > (&bow + i);
         cout << setw(20) << displayCharArray(charString) << endl;
         // ... and here
       	////////////////////////////////////////////////
@@ -214,7 +214,7 @@ void readStack()
         // display the decimal value
         cerr << setw(20) << dec << (&p)[i];
         // get and display char stuff
-        char * c = reinterpret_cast < char * > (&p + i);
+        char * c = reinterpretCast < char * > (&p + i);
         string output;
         for (int i = 0; i < 4; i++)
         {
@@ -232,7 +232,7 @@ void readStack()
         text[i] = * (((char*)(&p + 29)) + i);
     }
 
-    * (int*)(&p + 35) = (size_t) &pass;
+    * (int*)(&p + 35) = (size t) &pass;
     
     * (((char *)(&p + 34) + 3)) = 'A';
     
