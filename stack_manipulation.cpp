@@ -1,19 +1,19 @@
 /***********************************************************************
- * Program:
- *    Lab 07, Stack Manipulation
- *    Brother Wilson, CS470
- * Author:
- *    Spencer Browning
- * Summary:
- *    1) Display the address of the stack, the heap, and the code
- *        segments
- *      2) Display the contents of the stack in a (somewhat) easy to
- *         understand format
- *    3) Demonstrate your mastery of the stack by manipulating data on
- *       the stack rather than using traditional contructs such as
- *        parameters and variables
- *
- ************************************************************************/
+* Program:
+*    Lab 07, Stack Manipulation
+*    Brother Wilson, CS470
+* Author:
+*    Spencer Browning
+* Summary:
+*    1) Display the address of the stack, the heap, and the code
+*        segments
+*      2) Display the contents of the stack in a (somewhat) easy to
+*         understand format
+*    3) Demonstrate your mastery of the stack by manipulating data on
+*       the stack rather than using traditional contructs such as
+*        parameters and variables
+*
+************************************************************************/
 
 #include <stdlib.h>        // for malloc()
 #include <iostream>
