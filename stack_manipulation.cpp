@@ -37,9 +37,9 @@ int main()
     &number;
     
     cout << "Please select an option:\n";
-    cout << " 1. Find the address\n";
-    cout << " 2. Display the contents of the stack\n";
-    cout << " 3. Manipulate the Stack\n";
+    cout << " 1.  Find the address\n";
+    cout << " 2.  Display the contents of the stack\n";
+    cout << " 3.  Manipulate the Stack\n";
     cout << "> ";
     
     int selection;
