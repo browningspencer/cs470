@@ -35,7 +35,6 @@ void partThree(); // Demonstrate mastery of stack by mipulating data on
  * This function will only take you to one of the three parts
  * of Assignment 05
  *****************************************************/
-
 int main()
 {
     char text[] = "%%main%%";
@@ -84,7 +83,6 @@ int main()
  * Note that it will be in a different location with
  * every execution
  **********************************************/
-
 void partOne (int byValueParameter)
 {
     void *pStack = NULL;
@@ -125,7 +123,6 @@ void partOne (int byValueParameter)
  * by removing all the unprintable characters and replacing
  * them with a dot
  ***********************************************/
-
 string displayCharArray(const char * p)
 {
     string output;
@@ -140,7 +137,6 @@ string displayCharArray(const char * p)
  * Display the contents of the stack. This will be from
  * slot -4 to slot 20.
  *************************************************/
-
 void partTwo (char *text, long number)
 {
 	// start your display of the stack from this point
