@@ -24,10 +24,10 @@
 #include <string>
 using namespace std;
 
-void address(int); // Display the address of the stack, the heap, and the code segments
-void contents(char *, long); // Display the contents of the stack in a (somewhat) easy to
+void partOne(int); // Display the address of the stack, the heap, and the code segments
+void partTwo(char *, long); // Display the contents of the stack in a (somewhat) easy to
 // understand format
-void stack_manipulation(); // Demonstrate mastery of stack by mipulating data on
+void partThree(); // Demonstrate mastery of stack by mipulating data on
 // the stack
 
 int main()
@@ -48,13 +48,13 @@ int main()
     switch (selection)
     {
         case 1:
-            address(1);
+            partOne(1);
             break;
         case 2:
-            contents(text, number + 1111111);
+            partTwo(text, number + 1111111);
             break;
         case 3:
-            stack_manipulation();
+            partThree();
             break;
         default:
             cout << "Unknown option\n";
@@ -64,7 +64,7 @@ int main()
     return 0;
 }
 
-void address (int byValueParameter)
+void partOne (int byValueParameter)
 {
     void *pStack = NULL;
     void *pHeap = NULL;
@@ -74,7 +74,7 @@ void address (int byValueParameter)
     
     pHeap = new int;
     
-    pCode = (void*)&address;
+    pCode = (void*)&partOne;
     
     cout << "Stack: " << pStack << endl;
     cout << "Heap:  " << pHeap << endl;
@@ -91,7 +91,7 @@ string displayCharArray(const char * p)
     return output;
 }
 
-void contents (char *text, long number)
+void partTwo (char *text, long number)
 {
     long bow = number + 1111111;
     
@@ -171,7 +171,7 @@ void readStack()
 }
 
 
-void stack_manipulation()
+void partThree()
 {
     int number;
     char text[16];
