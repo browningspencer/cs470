@@ -15,7 +15,7 @@
 #include <iostream>
 #include <regex>
 #include <math.h>
-using namespace std::tr1;
+using namespace std;
 
 int main() {
     string password;
@@ -27,8 +27,8 @@ int main() {
     passwordLength = password.size();
     
     // Numbers
-    regex rNum("[\\[0-9]");
-    if (regex_search(password, rNum)) {
+    std::tr1::regex rNum("[\\[0-9]");
+    if (std::tr1::regex_search(password, rNum)) {
         alphabetSize += 10;
     }
     
