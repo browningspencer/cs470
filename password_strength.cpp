@@ -27,22 +27,22 @@ int main() {
     passwordLength = password.size();
     
     // Numbers
-    regex rNum("[\\[0-9]");
+    std::regex rNum("[\\[0-9]");
     if (regex_search(password, rNum))
         alphabetSize += 10;
     
     // Lowercase
-    regex rLower("[\\[a-z]");
+    std::regex rLower("[\\[a-z]");
     if (regex_search(password, rLower))
         alphabetSize += 26;
     
     // Uppercase
-    regex rUpper("[\\[A-Z]");
+    std::regex rUpper("[\\[A-Z]");
     if (regex_search(password, rUpper))
         alphabetSize += 26;
     
     // Special Characters
-    regex rSpecial("[^[:alnum:]]");
+    std::regex rSpecial("[^[:alnum:]]");
     if (regex_search(password, rSpecial))
         alphabetSize +=32;
         
