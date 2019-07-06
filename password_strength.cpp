@@ -1,14 +1,14 @@
 /***********************************************************************
- * Program:
- *    Lab 11, Password Strength
- *    Brother Wilson, CS470
- * Author:
- *    Spencer Browning
- * Summary:
- *    This program analyzes a password's strength.
- *    It will determine the possible combinations
- *    and how many bits the password is.
- ************************************************************************/
+* Program:
+*    Lab 11, Password Strength
+*    Brother Wilson, CS470
+* Author:
+*    Spencer Browning
+* Summary:
+*    This program analyzes a password's strength.
+*    It will determine the possible combinations
+*    and how many bits the password is.
+************************************************************************/
 
 #include <iostream>
 #include <string>
