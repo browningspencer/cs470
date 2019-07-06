@@ -22,35 +22,42 @@ int main() {
     int alphabetSize = 0;
     int passwordLength = 0;
     
-    cout << "Please enter password: ";
+    cout << "Please enter the password: ";
     cin >> password;
     passwordLength = password.size();
     
     // Numbers
-    std::regex rNum("[\\[0-9]");
-    if (regex_search(password, rNum))
+    regex rNum("[\\[0-9]");
+    if (regex_search(password, rNum)) {
         alphabetSize += 10;
+    }
     
     // Lowercase
-    std::regex rLower("[\\[a-z]");
-    if (regex_search(password, rLower))
+    regex rLower("[\\[a-z]");
+    if (regex_search(password, rLower)) {
         alphabetSize += 26;
+    }
     
     // Uppercase
-    std::regex rUpper("[\\[A-Z]");
-    if (regex_search(password, rUpper))
+    regex rUpper("[\\[A-Z]");
+    if (regex_search(password, rUpper)) {
         alphabetSize += 26;
+    }
     
     // Special Characters
-    std::regex rSpecial("[^[:alnum:]]");
-    if (regex_search(password, rSpecial))
+    std::regex rSpecial("[^a-zA-Z0-9\s]");
+    if (regex_search(password, rSpecial)) {
         alphabetSize +=32;
-        
+    }
+    
     int combinations = pow(alphabetSize, passwordLength);
     int bits = log2(combinations);
     
-    cout << "There are " << combinations << " number of unique combinations." << endl;
-    cout << "That amounts to a key of " << bits << " bits" << endl;
+    cout << alphabetSize << endl;
+    cout << passwordLength << endl;
+    
+    cout << "There are " << combinations << " combinations" << endl;
+    cout << "That is equivalent to a key of " << bits << " bits" << endl;
     
     return 0;
 }
