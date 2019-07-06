@@ -1,7 +1,7 @@
 /***********************************************************************
  * Program:
- *    Lab 11, Password Strength
- *    Brother Wilson, CS470
+ *      Lab 11, Password Strength
+ *      Brother Wilson, CS470
  * Author:
  *    Spencer Browning
  * Summary:
@@ -24,6 +24,9 @@ int calculateBits(double combinations);
 int calculateAlphabetSize(string password);
 void output(double combinations, int bits);
 
+/*********************************************
+ * main
+ *********************************************/
 int main()
 {
     string input = userInput();
@@ -40,7 +43,6 @@ int main()
 /*********************************************
  * userInput
  *********************************************/
-
 string userInput ()
 {
     string password;
