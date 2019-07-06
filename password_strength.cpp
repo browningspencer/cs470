@@ -15,7 +15,7 @@
 #include <iostream>
 #include <regex>
 #include <math.h>
-using namespace std;
+using namespace std::tr1;
 
 int main() {
     string password;
