@@ -19,7 +19,7 @@ using namespace std;
 
 int main() {
     string password;
-    int strength = 0;
+    int alphabetSize = 0;
     int passwordLength = 0;
     
     cout << "Please enter password: ";
@@ -29,24 +29,24 @@ int main() {
     // Numbers
     regex rNum("[\\[0-9]");
     if (regex_search(password, rNum))
-        strength += 10;
+        alphabetSize += 10;
     
     // Lowercase
     regex rLower("[\\[a-z]");
     if (regex_search(password, rLower))
-        strength += 26;
+        alphabetSize += 26;
     
     // Uppercase
     regex rUpper("[\\[A-Z]");
     if (regex_search(password, rUpper))
-        strength += 26;
+        alphabetSize += 26;
     
     // Special Characters
     regex rSpecial("[^[:alnum:]]");
     if (regex_search(password, rSpecial))
-        strength +=32;
+        alphabetSize +=32;
         
-    int combinations = pow(strength, passwordLength);
+    int combinations = pow(alphabetSize, passwordLength);
     int bits = log2(combinations);
     
     cout << "There are " << combinations << " number of unique combinations." << endl;
