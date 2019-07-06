@@ -1,12 +1,12 @@
 /***********************************************************************
 * Program:
-*    Week 11, Password Strength
+*    Lab 11, Password Strength
 *    Brother Wilson, CS470
 * Author:
 *    Spencer Browning
 * Summary:
 *    This program analyzes a password's strength.
-*    It will determine the possible cominations
+*    It will determine the possible combinations
 *    and how many bits the password is.
 ************************************************************************/
 
@@ -62,7 +62,8 @@ double calculateCombinations(string password)
     
     int alphabetSize = calculateAlphabetSize(password);
     
-    double combinations = pow(alphabetSize, passwordLength);
+    double combinations = 0;
+    combinations = pow(alphabetSize, passwordLength);
     
     return combinations;
 }
@@ -86,9 +87,11 @@ int calculateAlphabetSize(string password)
     char iterator = 'a';
     
     // iterating through each char in password string
-    for (int i = 0; i < password.length(); i++) {
+    for (int i = 0; i < password.length(); i++)
+    {
         iterator = password[i];
-        if (ispunct(iterator)) {
+        if (ispunct(iterator))
+        {
             if (foundSymbol)
                 continue;
             
@@ -96,7 +99,8 @@ int calculateAlphabetSize(string password)
             foundSymbol = true;
         }
         
-        if (isdigit(iterator)) {
+        if (isdigit(iterator))
+        {
             if (foundNumber)
                 continue;
             
@@ -104,7 +108,8 @@ int calculateAlphabetSize(string password)
             foundNumber = true;
         }
         
-        if (isupper(iterator)) {
+        if (isupper(iterator))
+        {
             if (foundUpperCase)
                 continue;
             
@@ -112,7 +117,8 @@ int calculateAlphabetSize(string password)
             foundUpperCase = true;
         }
         
-        if (islower(iterator)) {
+        if (islower(iterator))
+        {
             if (foundLowerCase)
                 continue;
             
@@ -142,6 +148,7 @@ void output(double combinations, int bits)
 {
     cout.setf(ios::fixed);
     
-    cout << "There are " << setprecision(0) << combinations << " combinations" << endl;
+    cout << "There are " << setprecision(0) << combinations;
+    cout << " combinations" << endl;
     cout << "That is equivalent to a key of " << bits << " bits" << endl;
 }
